@@ -47,7 +47,9 @@ for (let i = 0; i < tasks.length; i++) {
         tasksOver2HoursDuration += tasks[i].duration;
     }
 }
+const workedMinutes = tasksOver2HoursDuration % 60;
+const workedHours = (tasksOver2HoursDuration - workedMinutes) / 60;
 tasksOver2HoursDuration /= 60;
 const euroPerHour = 16.00;
-let earned = tasksOver2HoursDuration * euroPerHour;
-console.log("Maartje has worked for " + tasksOver2HoursDuration.toFixed(2) + " hours and has earned €" + earned.toFixed(2));
+const earned = tasksOver2HoursDuration * euroPerHour;
+console.log("Maartje has worked for " + workedHours + ":" + workedMinutes + " hours and has earned €" + earned.toFixed(2));
