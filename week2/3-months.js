@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 const months = [
     { name: 'January', days: 31 },
@@ -21,7 +21,7 @@ for (let i = 0; i < months.length; i++) {
     daysOfYear += months[i].days;
 }
 
-if (daysOfYear == 365) {
+if (daysOfYear === 365) {
     console.log("Yep, it adds up to 365.");
 } else {
     console.log("Oh no! It doesn't add up to 365!");
