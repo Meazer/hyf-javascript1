@@ -11,14 +11,13 @@ console.log("using Comparison operators x & z ==>", z === x, z == x);
 function equal(arr1, arr2) {
     if (arr1.length !== arr2.length) {
         return false;
-    } else {
-        for (let i = 0; i < arr1.length; i++) {
-            if (arr1[i] !== arr2[i]) {
-                return false;
-            }
-        }
-        return true;
     }
+    for (let i = 0; i < arr1.length; i++) {
+        if (arr1[i] !== arr2[i]) {
+            return false;
+        }
+    }
+    return true;
 }
 
 console.log("using equal function x & y ==>", equal(x, y));

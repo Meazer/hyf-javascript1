@@ -1,9 +1,10 @@
 "use strict";
 
-const vehicles = ["car", "motorbike", "caravan", "bike"];
+
 function vehicleType(color, code, age) {
+    const vehicles = ["car", "motorbike", "caravan", "bike"];
     let vehicle;
-    if ((0 < code) && (code <= vehicles.length)) {
+    if (0 < code && code <= vehicles.length) {
         vehicle = vehicles[code - 1];
     } else { return "unknown vehicle!"; }
     const used = (age > 1) ? "used" : "new";

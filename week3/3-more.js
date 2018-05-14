@@ -1,7 +1,7 @@
 "use strict";
 
 function printObject(obj) {
-    for (let pro in obj) {
+    for (const pro in obj) {
         console.log(pro + " = " + obj[pro]);
     }
 }

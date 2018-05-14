@@ -2,10 +2,16 @@
 
 function advertisement(vehicleNames) {
     let result = "Amazing Joe's Garage, we service ";
-    for (let i = 0; i < vehicleNames.length - 1; i++) {
-        result += vehicleNames[i] + "s, ";
+    const plurals = vehicleNames.map(name => name + "s");
+
+    for (let i = 0; i < plurals.length - 1; i++) {
+
+        result += plurals[i];
+        result += (i < plurals.length - 2) ? ", " : " and ";
+
     }
-    result += "and " + vehicleNames[vehicleNames.length - 1] + "s.";
+
+    result += plurals[plurals.length - 1] + ".";
     return result;
 }
 
